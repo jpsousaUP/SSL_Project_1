@@ -40,7 +40,7 @@ def read_from_npy(X_path, y_path):
     _, y_unique = np.unique(y, return_inverse=True)
     y_encoded = tf.keras.utils.to_categorical(y_unique, num_classes=N_CLASSES)
     
-    # split in train, val and test
+    # split in train, val and test    
     X_train, X_val, y_train, y_val = train_test_split(X, y_encoded, test_size=0.3, random_state=42)
     X_val, X_test, y_val, y_test = train_test_split(X_val, y_val, test_size=0.5, random_state=42)
     
