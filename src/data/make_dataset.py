@@ -127,10 +127,6 @@ def main(project_dir, bag_name):
     """
     # Append the last 2 columns of timestamps to y
     y = timestamps[:, 4:]
-
-    # Print shapes
-    print("y shape: ", y.shape)
-    #print("X shape: ", X.shape)
         
     # create a dict with dataset info
     dataset_info = {
@@ -151,9 +147,15 @@ def main(project_dir, bag_name):
     np.save(os.path.join(project_dir, "data/processed", bag_name, "_xiris.npy"), xiris)
     np.save(os.path.join(project_dir, "data/processed", bag_name, "_manta.npy"), manta)
     np.save(os.path.join(project_dir, "data/processed", bag_name, "_feats.npy"), feats)
-    
     #np.save(os.path.join(project_dir, "data/processed", bag_name, "_X.npy"), X)
     np.save(os.path.join(project_dir, "data/processed", bag_name, "_y.npy"), y)
+    
+    # print shapes
+    print("xiris shape: ", xiris.shape)
+    print("manta shape: ", manta.shape)
+    print("feats shape: ", feats.shape)
+    #print("X shape: ", X.shape)
+    print("y shape: ", y.shape)
     
 
 def preprocess_manta(img_path, resolution=320):
