@@ -7,7 +7,7 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 
-MELT_T = 1150
+MELT_T = 1200
 MAX_T = 2300
 RESOLUTION = 320
 

@@ -16,3 +16,4 @@ opencv-python-headless
 scikit-learn
 mcap-ros2-support
 tqdm
+tensorflow-addons
